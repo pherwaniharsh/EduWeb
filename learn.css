@@ -17,7 +17,8 @@ nav{
     background-color: var(--background2);
     /* box-shadow: 0 4px 2px -2px black; */
     width: 100%;
-    position: sticky;
+    align-items: center;
+    /* position: sticky; */
    
 }
 
@@ -27,7 +28,7 @@ nav{
 
 .navPart{
     display: flex;
-    width: 306px;
+    /* width: 306px; */
     justify-content: space-around;
     align-items: center;
 }
@@ -38,7 +39,10 @@ nav{
 }
 
 .cartSystem{
-    justify-self: flex-end;
+    /* justify-self: flex-end; */
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
 }
 
 .linkStyle{
@@ -244,22 +248,27 @@ nav{
 .selfieImage{
     background-image: url("images/about-shape-3.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 65%;
+    background-size: contain;
+    width: 722px;
+    height: 528px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     /* padding: 0px 30px; */
 }
 
 .selfie{
     border-radius: 10px;
+    /* margin: 0px auto; */
 }
 
 .aboutUsText{
     padding: 0px 50px;
     width: 45%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .goldenTick{
@@ -381,6 +390,7 @@ nav{
     align-items: center;
     /* padding: 0 50px; */
     width: 1090px;
+    /* max-width: 100%; */
     height: 625px;
     margin: 0 auto;
     /* background-size: contain; */
@@ -392,8 +402,11 @@ nav{
 
 .videoRadius{
     border-radius: 0px 80px 0px 80px;
+    display: block;
     height: 500px; 
+    /* height: 46vh; */
     width: 890px;
+    /* width: 46vw; */
 }
 
 .metrics{
@@ -452,8 +465,10 @@ nav{
     background-image: url('/images/blog-bg.svg');
     background-size: cover;
     text-align: center;
-    padding: 50px;
+    /* padding: 50px; */
     margin-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .blogImg1{
@@ -470,7 +485,7 @@ nav{
 
 .blogImgScaling{
     background-size: contain;
-    height: 100vh;
+    height: 400px;
     background-repeat: no-repeat;
     width: 370px;
     display: flex;
@@ -480,8 +495,13 @@ nav{
     margin-top: 30px;
 }
 
-.blogImgScaling:hover .letsGo {
-    display: flex;
+.ImgPreviewCollection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 50px; */
+    /* height: 650px; */
+    position: relative;
 }
 
 
@@ -519,7 +539,12 @@ nav{
     top: -30px;
     right: 20px;
     cursor: pointer;
-    display: none;
+    opacity: 0;
+}
+
+.ImgPreviewCollection:hover .letsGo {
+    opacity: 100;
+    transition: 0.25 ease;
 }
 
 .letsGo:hover{
@@ -545,41 +570,170 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 300px;
     gap: 40px;
+    /* width: 100%; */
 }
 
-@media(max-width: 1182px){
-    .courseList{
-        align-items: center;
-    }
-
-    .blogGrid{
-        grid-template-columns: 25% 25%;
-        /* grid-template-rows: 500px; */
-        gap: 200px;
-    }
+.footerLinks{
+    display: flex;
+    gap: 50px;
 }
 
-@media(max-width: 811px){
-    .blogGrid{
-        grid-template-columns: 25%;
-        grid-template-rows: 25%;
-        /* gap: 200px; */
+.hamCancel{
+    display: none; 
+    margin: 0px auto;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
+
+.ham{
+    display: none;
+    font-size: 40px;
+    
+    /* width: 100vw; */
+}
+.navDisplay{
+    display: flex;
+}
+
+.hamDiv{
+    background-color: #F5F2EB;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+@media(max-width: 1024px){
+
+    .hero{
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .hero-text{
+        width: 80%;
         text-align: center;
-        justify-content: center;
     }
+
+    nav{
+        height: 100vh;
+        justify-content: space-around;
+        width: 300px;
+        flex-direction: column;
+        position: fixed;
+        top: 0px;
+        /* bottom: 0px; */
+        align-items: center;
+        /* gap: 50px; */
+        z-index: 1;
+        padding: 30px 20px;
+        /* display: none; */
+    }
+
+    .navPart{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        height: 200px;
+        /* margin-top: 40px; */
+    }
+
+    /* .logo{
+        margin-top: 50px;   
+    } */
 
     .aboutUs{
         flex-direction: column;
+        text-align: center;
         align-items: center;
-        gap: 30px;
     }
 
     .aboutUsText{
-        width: 65%;
+        width: 85%;
+        text-align: left;
     }
 
-    .blogImgScaling{
-        height: 45vh;
-        gap: 0px;
+    .selfieImage{
+        background-image: none;
+    }
+
+    .selfie{
+        width: 800px;
+        height: auto;
+    }
+
+    .ham{
+        display: inline-block;
+    }
+
+    .cartSystem{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 768px){
+    .hero{
+        padding: 20px 20px 290px 20px;
+    }
+
+    .heroImages{
+        flex-direction: column;
+    }
+    .aboutUsText{
+        padding: 0px;
+    }
+
+    .courseCollection{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .selfieImage{
+        background-image: none;
+    }
+
+    .selfie{
+        width: 300px;
+        height: auto;
+    }
+
+    .courseTypes{
+        width: 60%;
+    }
+
+    .pamphlet{
+        width: 340px;
+        margin: 0px auto;   
+    }
+
+    .radius{
+        width: 340px;
+    }
+
+    .metrics{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 360px){
+
+    .selfieImage{
+        background-image: none;
+    }
+
+    .selfie{
+        width: 300px;
+        height: auto;
     }
 }
