@@ -464,11 +464,12 @@ nav{
 .blogList{
     background-image: url('/images/blog-bg.svg');
     background-size: cover;
+    /* background-repeat: no-repeat; */
     text-align: center;
     /* padding: 50px; */
     margin-top: 50px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .blogImg1{
@@ -568,7 +569,7 @@ footer{
     background-repeat: no-repeat;
     padding: 80px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 300px;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     /* width: 100%; */
 }
@@ -626,7 +627,7 @@ footer{
         /* gap: 50px; */
         z-index: 1;
         padding: 30px 20px;
-        /* display: none; */
+        display: none;
     }
 
     .navPart{
@@ -654,8 +655,33 @@ footer{
         text-align: left;
     }
 
+    .blogGrid{
+        grid-template-columns: 370px;
+        grid-row-gap: 100px;
+    }
+
+    .blogList{
+        padding-top: 250px;
+    }
+
+    .VideoBannerPosition{
+        display: inline-block;
+        background-image: none;
+        margin: 0px;
+        width: 100%;
+        height: auto;
+        margin-top: 80px;
+    }
+
+    .videoRadius{
+        width: 400px;
+        height: auto;
+        margin: 0px auto;
+    }
+
     .selfieImage{
         background-image: none;
+        width: auto;
     }
 
     .selfie{
@@ -690,11 +716,28 @@ footer{
     .aboutUsText{
         padding: 0px;
     }
-
+    .blogList{
+        padding-top: 350px;
+    }
     .courseCollection{
         flex-direction: column;
         align-items: center;
         gap: 50px;
+    }
+
+    .VideoBannerPosition{
+        display: inline-block;
+        background-image: none;
+        margin: 0px;
+        width: 100%;
+        height: auto;
+        margin-top: 80px;
+    }
+
+    .videoRadius{
+        width: 300px;
+        height: auto;
+        margin: 0px auto;
     }
 
     .selfieImage{
@@ -735,5 +778,9 @@ footer{
     .selfie{
         width: 300px;
         height: auto;
+    }
+
+    .blogImgScaling{
+        width: 340px;
     }
 }
