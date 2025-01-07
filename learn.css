@@ -320,15 +320,15 @@ nav {
 }
 
 .backgroundImage1 {
-    background-image: url("/images/course-1.jpg");
+    background-image: url("./images/course-1.jpg");
 }
 
 .backgroundImage2 {
-    background-image: url('/images/course-2.jpg');
+    background-image: url('./images/course-2.jpg');
 }
 
 .backgroundImage3 {
-    background-image: url('/images/course-3.jpg');
+    background-image: url('./images/course-3.jpg');
 }
 
 .weeks {
@@ -380,14 +380,14 @@ nav {
 }
 
 .svgSimulation {
-    background-image: url('images/video-bg.png');
+    background-image: url('.images/video-bg.png');
     background-repeat: no-repeat;
 }
 
 .VideoBannerPosition {
     /* padding-block-start: -750px; */
     display: flex;
-    background-image: url('/images/video-shape-1.png');
+    background-image: url('./images/video-shape-1.png');
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
@@ -465,7 +465,7 @@ nav {
 }
 
 .blogList {
-    background-image: url('/images/blog-bg.svg');
+    background-image: url('./images/blog-bg.svg');
     background-size: cover;
     /* background-repeat: no-repeat; */
     text-align: center;
@@ -476,15 +476,15 @@ nav {
 }
 
 .blogImg1 {
-    background-image: url('/images/blog-1.jpg');
+    background-image: url('./images/blog-1.jpg');
 }
 
 .blogImg2 {
-    background-image: url('/images/blog-2.jpg');
+    background-image: url('./images/blog-2.jpg');
 }
 
 .blogImg3 {
-    background-image: url('/images/blog-3.jpg');
+    background-image: url('./images/blog-3.jpg');
 }
 
 .blogImgScaling {
@@ -567,7 +567,7 @@ nav {
 
 footer {
     background-color: black;
-    background-image: url('/images/footer-bg.png');
+    background-image: url('./images/footer-bg.png');
     background-size: round;
     background-repeat: no-repeat;
     padding: 80px;
